@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mystyle.css">
+
+    <style>
+      
+    </style>
+
+</head>
+<body>
+
+<div class="stable">
+
+        <div class="stable1">
+            <h3>Already have an account?</h3>
+            <button id="log"  class="lbtn"  onclick="slideLeft()">Login</button>
+        </div>
+     
+         <div class="stable2">
+            <h3>Don't have an account?</h3>
+
+            <button id="reg" class="rbtn"  onclick="slideRight()">Register</button>
+         </div>
+
+    <div class="swtching" id="box">
+
+
+        <div id="logincontent" class="logincontent">
+            <h2 >Login Form</h2>
+          <form>
+            <input class="input" type="text" placeholder="Email address" name="email" required> 
+            <br>
+            <input class="input" type="password" placeholder="Password" name="psw" required>
+            <br>
+            <div class="check">
+                    <input class="checkbox" type="checkbox"  name="remember" style="margin-bottom:15px"> <b>Remember me</b>
+                  </div>
+
+
+            <br>        
+    
+            <button class="btn1">Login</button>
+
+          </form>
+        </div>
+
+
+        <div id="regcontent" class="regcontent">
+            <h2 >Registration Form</h2>
+          <form>
+            <input class="input1" type="text" placeholder="Name" required> 
+
+            <input class="input1" type="text" placeholder="Email address" name="email" required> 
+            <input class="input1" type="password" placeholder="create password" name="psw" required>
+            
+            <input class="input1" type="password" placeholder="confirm password" name="psw" required>
+
+            <button class="btn2">Register</button>
+          </form>
+          </div>
+    </div>
+   
+
+
+</div>
+
+<script>
+
+    const box = document.getElementById('box');
+
+
+    function slideRight() {
+        box.classList.add('slide-in');
+    }
+
+    const reg = document.getElementById('reg');
+
+
+    reg.addEventListener('click', () => {
+        regcontent.style.display = 'none';
+      
+        const box = document.getElementById('regcontent');
+        regcontent.style.display = 'block';
+      });
+
+      reg.addEventListener('click', () => {
+        logincontent.style.display = 'block';
+      
+        const box = document.getElementById('logincontent');
+        logincontent.style.display = 'none';
+      });
+
+
+      log.addEventListener('click', () => {
+        regcontent.style.display = 'block';
+      
+        const box = document.getElementById('regcontent');
+        regcontent.style.display = 'none';
+      });
+
+      log.addEventListener('click', () => {
+        logincontent.style.display = 'block';
+      
+        const box = document.getElementById('logincontent');
+        logincontent.style.display = 'block';
+      });
+
+ 
+        function slideLeft() {
+            box.classList.remove('slide-in');
+        }
+
+  
+
+</script>
+   
+
+</body>
+</html>
